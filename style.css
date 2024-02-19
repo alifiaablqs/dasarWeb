@@ -13,5 +13,14 @@ h2{
 }
 
 #kotak{
-    
+    width: 400px;
+    color: #fff;
+    background: blue;
+    padding: 50px;
+}
+
+body{
+    background: url('img/tree2.png'), url('img/field1.jpg');
+    background-repeat: no-repeat, repeat;
+    color:  white;
 }
