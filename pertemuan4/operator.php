@@ -62,5 +62,21 @@ $hasilTidakIdentik = $a !== $b;
 echo "<br>";
 echo "Hasil dentik adalah $hasilIdentik <br>";
 echo "Hasil tidak identik adalah $hasilTidakIdentik <br>";
+
+//Restoran
+$kursiPengunjung = 45;
+$kursiTerisi = 28;
+//Pada suatu malah 28 kursi telah di tempati, Berapa persen kursi yang masih kosong?
+$kursiKosong = $kursiPengunjung - $kursiTerisi;
+$persentasiKursi = $kursiKosong / $kursiPengunjung *100;
+
+echo"<br>";
+echo"------------------------------------------------<br>";
+echo"Data Kursi Kosong Restoran <br>"; 
+echo"------------------------------------------------<br>";
+echo"Jumlah Kursi Seluruhnya :  $kursiPengunjung kursi <br>";
+echo"Jumlah Kursi Terisi     :  $kursiTerisi kursi <br>";
+echo"Jumlah Kursi Kosong     :  $kursiKosong kursi <br>";
+echo"Presentase Kursi Kosong :  $persentasiKursi% <br>";
 ?>
 
