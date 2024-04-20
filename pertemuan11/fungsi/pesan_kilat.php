@@ -1,13 +1,11 @@
-
 <?php
 function set_flashdata($key = "", $value = "")
 {
-    if (!empty($key) || empty($value)) {
+    if (!empty($key) && !empty($value)) {
         $_SESSION['_flashdata'][$key] = $value;
         return true;
     }
     return false;
-    
 }
 
 function get_flashdata($key = "")
@@ -29,15 +27,16 @@ function pesan($key = "", $pesan = "")
         <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>");
     } elseif ($key == "success") {
         set_flashdata("success", "<div class='alert alert-success alert-dismissible fade show' role='alert'>
-        <strong>Success!</strong> {$pesan}
+        <strong>Berhasil!</strong> {$pesan}
         <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>");
     } elseif ($key == "danger") {
         set_flashdata("danger", "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-        <strong>Danger!</strong> {$pesan}
+        <strong>Gagal!</strong> {$pesan}
         <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>");
     } elseif ($key == "warning") {
         set_flashdata("warning", "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
-        <strong>Warning!</strong> {$pesan}
+        <strong>Peringatan!</strong> {$pesan}
         <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>");
     }
 }
+?>
